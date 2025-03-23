@@ -1,0 +1,9 @@
+chroma_db/
+.venv
+*.db
+__pycache__/
+*.py[cod]
+*$py.class
+.env/
+.venv
+sample-judgments/
