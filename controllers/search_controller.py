@@ -1,5 +1,5 @@
 from flask_restx import Namespace, Resource
-from flask import request, send_file
+from flask import send_file
 from services.search_service import get_judgments_search
 from exceptions.storage_exceptions import NoMatchingJudgmentException
 from models.search_schema import get_search_parser, search_responses

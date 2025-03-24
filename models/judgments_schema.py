@@ -9,7 +9,9 @@ def get_judgments_parser():
         required=False,
         help='Optional JSON-style filter. '
         'Valid keys: case_name, citation, year, parties.\n'
-        'Example: metadata={"year": 2020, "case_name": "Public Prosecutor"}'
+        'Example: metadata={"year":2020,"case_name":"Public Prosecutor"}\n'
+        'IMPORTANT NOTE 1: do NOT add any whitespaces or newlines between the key value pairs, it will be interpreted as malformed metadata\n'
+        'IMPORTANT NOTE 2: make sure to wrap your keys in apostrophes.'
     )
     return judgment_parser
 

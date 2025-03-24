@@ -1,4 +1,5 @@
-from flask_restx import reqparse
+from flask_restx import reqparse, fields
+
 from werkzeug.datastructures import FileStorage
 
 upload_parser = reqparse.RequestParser()
@@ -13,4 +14,9 @@ upload_parser.add_argument(
 upload_responses =  {
     201: 'Successful upload',
     409: 'Duplicate file upload'
+}
+
+upload_response_model = {
+    'message': fields.String(description='Success message'),
+    'id': fields.String(description='Unique ID assigned to the uploaded judgment')
 }
